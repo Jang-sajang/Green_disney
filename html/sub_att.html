@@ -8,46 +8,56 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/sub.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <header>
-    <div class="inner_container">
-        <div class="logo">
-            <a href="index.html"><img src="images/logo3.png" alt="디즈니 로고" width="200" height="66"></a>
-        </div>
-        <div class="header_menu">
-            <ul class="bottom_menu">
-                <li><a href="#">즐길거리</a>
-                  <ul class="lnb">
-                    <li><a href="sub_att.html">놀이기구</a></li>
-                    <li><a href="#">페스티벌</a></li>
-                    <li><a href="#">식당/쇼핑</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">요금/우대혜택</a>
-                  <ul class="lnb">
-                    <li><a href="#">이용요금</a></li>
-                    <li><a href="#">숙소요금</a></li>
-                    <li><a href="#">할인&혜택</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">이용가이드</a>
-                  <ul class="lnb">
-                    <li><a href="#">운영/운휴</a></li>
-                    <li><a href="#">이용안내</a></li>
-                    <li><a href="#">오시는길</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">소통서비스</a>
-                  <ul class="lnb">
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">고객의소리</a></li>
-                  </ul>
-                </li>
-                <li><a href="#"><img src="images/login.png" alt="로그인 아이콘" width="60"></a></li>
-            </ul>
-        </div>
-    </div>
-</header>
+  <script src="js/mouse.js"></script>
+  <body>
+  <div id="wrap">
+    <div id="nav">
+      <div class="inner">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="images/logo3.png" alt="disney" width="200" height="66">
+          </a>
+        </h1>
+        <nav class="nav1">
+          <ul class="gnb clear">
+            <li><a href="#">즐길거리</a>
+              <ul class="lnb" id="lnb1">
+                <li><a href="sub_att.html">놀이기구</a></li>
+                <li><a href="#">페스티벌</a></li>
+                <li><a href="#">식당/쇼핑</a></li>
+              </ul>
+            </li>
+            <li><a href="#">요금/우대혜택</a>
+              <ul class="lnb" id="lnb2">
+                <li><a href="#">이용요금</a></li>
+                <li><a href="#">숙소요금</a></li>
+                <li><a href="#">할인&혜택</a></li>
+              </ul>
+            </li>
+            <li><a href="#">이용가이드</a>
+              <ul class="lnb" id="lnb3">
+                <li><a href="#">운영/운휴</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">오시는길</a></li>
+              </ul>
+            </li>
+            <li><a href="#">소통서비스</a>
+              <ul class="lnb" id="lnb3">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">고객의소리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="login"><a href="login.html"><img src="images/login.png" alt="로그인 아이콘" width="60"></a></div>
+      </div>
+    </div><!--header end-->
+
+    <header>
+  
+    </header><!--visual-slider end-->
+  </div>
   <div id="box1">
   <h2>원하는 놀이기구를 터치해보세요</h2>
     </div>
@@ -451,3 +461,32 @@
       </div>
     </footer>
     </div>
+    <script>
+      
+    function navigo() {
+      const nav = document.querySelector('#nav');
+      const hideStartPosition = 150; // 스크롤 위치가 이 값보다 클 때 메뉴를 숨김
+      const fixedStartPosition = 200; // 스크롤 위치가 이 값보다 클 때 메뉴를 고정
+
+      document.addEventListener('scroll', onScroll, { passive: true });
+
+      function onScroll() {
+        const scrollPosition = window.pageYOffset;
+
+        if (scrollPosition >= fixedStartPosition) {
+          nav.classList.add('fixed');
+        } else {
+          nav.classList.remove('fixed');
+        }
+
+        if (scrollPosition >= hideStartPosition) {
+          nav.classList.add('hidden');
+        } else {
+          nav.classList.remove('hidden');
+        }
+      }
+    }
+
+    navigo();
+    </script>
+    </body>
