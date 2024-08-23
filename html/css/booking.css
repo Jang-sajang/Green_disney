@@ -11,6 +11,7 @@ a {text-decoration: none;}
 
 
 
+<<<<<<< HEAD
 /* TOP */
 #toTop {
 	position: fixed; 	/* 포지션 고정 */
@@ -19,6 +20,9 @@ a {text-decoration: none;}
 	z-index: 9999; 		/* 포지션을 먼저 지정후 z-좌표(레이어) : 9999입니다. */
   left: 87%;
 }
+=======
+
+>>>>>>> HYS
 /* 헤더 */
 body {
   height:1000px;
@@ -139,7 +143,11 @@ h2 {
 }
 
 #book_card{
+<<<<<<< HEAD
 margin: 90px 0 0 200px;
+=======
+margin: 90px 0 0 290px;
+>>>>>>> HYS
 }
 
 ul {
