@@ -3,14 +3,23 @@
 a {text-decoration: none;}
 .inner_container {width: 100%; }
 
+/* TOP */
+#toTop {
+	position: fixed; 	/* 포지션 고정 */
+	bottom: 300px; 		/* 밑에서 100px */
+	display: none; 		/* 보여지지 없음 - 기본적으로 안보여지게 */
+	z-index: 9999; 		/* 포지션을 먼저 지정후 z-좌표(레이어) : 9999입니다. */
+  left: 87%;
+}
+
 /* 헤더 */
 body {
-  height: 3000px;
+  height:1000px;
   margin: 0;
   padding: 0;
 }
 #wrap{
-  /* height: 500px; */
+  height: 100px;
   background-color: rgba(15, 56, 123);
 }
 #nav {
@@ -113,8 +122,7 @@ body {
   color: #fff;
   text-align: center; /* Align text to the left */
 }
-
-header{height: 100px;}
+/* header{height: 100px;} */
 
 #miki {
   top: -62px;
