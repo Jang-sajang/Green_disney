@@ -11,7 +11,7 @@ a {text-decoration: none;}
 	bottom: 100px; 		/* 밑에서 100px */
 	display: none; 		/* 보여지지 없음 - 기본적으로 안보여지게 */
 	z-index: 9999; 		/* 포지션을 먼저 지정후 z-좌표(레이어) : 9999입니다. */
-  left: 85%;
+  left: 87%;
 }
 /* 헤더 */
 body {
@@ -243,7 +243,7 @@ body {
 
 
 /* 어트랙션 */
-#shop {height: 700px; background-image: url(../images/princes.png);
+#shop {height: 700px; background-image: url(../images/mickey_mini.png);
 background-repeat: no-repeat;}
 #shop .title{
     margin-top:200px;
@@ -399,9 +399,9 @@ background-repeat: no-repeat;}
     }
 }
 
-#newsletter p {font-size: 40px; color: #fff; font-weight: bold; letter-spacing: 5px; text-align: right; line-height: 55px; margin-right: 90px;}
-#newsletter a {color: #fff; position: relative; transition: all .5s;}
-#newsletter img {margin-right: 20px; position: absolute; left: -70px; top: 10px; transition: all .5s;}
+#newsletter p {font-size: 40px; color: #fff; font-weight: bold; letter-spacing: 5px; text-align: left; line-height: 55px; margin-left: 1100px;}
+#newsletter a {color: #fff; position: relative; transition: all .5s; left: 75px;}
+#newsletter img {margin-right: 20px; position: absolute; left: -70px; top: 10px; transition: all .5s; left: -70px;}
 #newsletter img:last-of-type {opacity: 0;}
 #newsletter a:hover {color: #00a0fb;}
 #newsletter a:hover img:last-of-type {opacity: 1;}
@@ -520,15 +520,15 @@ background-repeat: no-repeat;}
 
 
 /* SNS */
-#partner {width: 1500px;height: 1000px; overflow: hidden; margin: 0 auto;}
+#partner {width: 1300px;height: 1000px; overflow: hidden; margin: 0 auto;}
 #partner .partner_hover h1 a{color: #fff; font-size: 100px; font-weight: bold; margin-left: 20px;}
 #partner .partner_hover h2 {color: #fff; font-size: 30px; font-weight: bold; margin-left: 20px; margin-top: 20px;}
 #partner .partner_hover .white_back {height: 50px; background-color: #fff; margin-top: 70px; width: 1px; transition-duration: 0.7s;}
 #partner .partner_hover p {font-size: 20px; text-align: center; letter-spacing: -2px; line-height: 50px; transition-duration: 1s; transition-delay: .7s; opacity: 0;}
 
-#partner .b_green {width: 600px; height: 800px; background-image: url(../images/partner_1.png);float: left;}
-#partner .classroom {width:900px; height: 400px; background-image: url(../images/partner_2.png); float: left;}
-#partner .coffee {width: 900px; height: 400px; background-image: url(../images/partner_3.png); float: left;}
+#partner .b_green {width: 500px; height: 800px; background-image: url(../images/partner_1.png);float: left;}
+#partner .classroom {width:800px; height: 400px; background-image: url(../images/partner_2.png); float: left;}
+#partner .coffee {width: 800px; height: 400px; background-image: url(../images/partner_3.png); float: left;}
 
 #partner .b_green .partner_hover p { color: #83bc92;}
 #partner .classroom .partner_hover p { color: #e8b837;}
