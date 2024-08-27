@@ -1,22 +1,25 @@
 @charset "utf-8";
 
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sofia", sans-serif;
+}
 a {text-decoration: none;}
 .inner_container {width: 100%; }
 
-/* TOP */
-#toTop {
-	position: fixed; 	/* 포지션 고정 */
-	bottom: 300px; 		/* 밑에서 100px */
-	display: none; 		/* 보여지지 없음 - 기본적으로 안보여지게 */
-	z-index: 9999; 		/* 포지션을 먼저 지정후 z-좌표(레이어) : 9999입니다. */
-  left: 87%;
-}
+
+
 
 /* 헤더 */
 body {
+
   height:1000px;
-  margin: 0;
+  margin: 0px;
   padding: 0;
+
+  background-repeat: no-repeat;
 }
 #wrap{
   height: 100px;
@@ -122,131 +125,102 @@ body {
   color: #fff;
   text-align: center; /* Align text to the left */
 }
-/* header{height: 100px;} */
 
-#miki {
-  top: -62px;
+/* 디즈니파크 티켓 선택 */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-
-#menu > ul > li > ul > li:hover {
-background-color: rgb(157, 134, 241, 0);
-transition: ease 1s;
-}
-
-#box1 {
-  background-color: rgb(235, 158, 17);
-  height: 145px;
-  
-    }
-
-#box1 > h2{
-  color: white;
-  text-align: center;
-  padding-top: 55px;
+h1 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 300;
   margin-top: 0;
 }
-
-.contain {
-  margin: 0 auto;
-  padding: 0px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px 60px;
-  max-width: 950px;
-}
-
-.picture {
+.control-group {
   display: inline-block;
-  border-radius: 25px;
-  width: 409px;
-  border: 3px dashed rgb(235, 158, 17);
-  margin: 20px;
-  cursor: pointer;
-  transition: all .4s;
+  vertical-align: top;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 200px;
+  height: 210px;
+  margin: 10px;
+}
+.control {
+  display: block;
   position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
 }
-
-    .picture:active {
-  transform: translateX(3px) translateY(3px);
-  box-shadow: 3px 3px 3px #7b7c76;
-}
-
-
-h2 {
-  padding: 5px 20px;
-  color: #1a0b44;
-}
-
-#round {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 10px;
-  width: 403px;
-  height: 253px;
-  margin-right: 20px;
-  margin-bottom: 5px;
-}
-
-.detail>ul {
-  list-style: none;
-  padding-left: 20px;
-}
-
-.detail>ul>li {
-  line-height: 24px;
-}
-
-.detail>ul>li>strong {
-  color: rgb(235, 158, 17);
-  font-size: 20px;
-}
-
-.detail>ul>li>span {
-  color: #1a0b44;
-  font-size: 17px;
-}
-
-
-.detail {
-  height: 20px;
-}
-
-.detail ul {
-  opacity: 0;
+.control input {
   position: absolute;
-  transform: translateX(-200px);
+  z-index: -1;
+  opacity: 0;
 }
-
-.picture:hover .detail {
-  animation: ani1 1s forwards;
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
 }
-
-.picture:hover .detail ul {
-  animation: ani2 1s forwards;
-  animation-delay: 0.2s;
+.control--radio .control__indicator {
+  border-radius: 50%;
 }
-
-@keyframes ani1 {
-  0% {
-    height: 20px;
-  }
-
-  100% {
-    height: 280px;
-  }
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
 }
-
-@keyframes ani2 {
-  0% {
-    opacity: 0;
-    transform: translateY(-200px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+.control input:checked ~ .control__indicator {
+  background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #0e647d;
+}
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--checkbox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+  background: #7b7b7b;
 }
 
 /* Footer Styles */
