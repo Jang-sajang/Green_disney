@@ -1,31 +1,33 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
-body{
-  background-image: url("../images/wallpaperflare.com_wallpaper\ \(5\).jpg");
+body {
+  background-image: url("/images/wallpaer\ \(5\).jpg");
   background-size: cover;
 }
 
 
-.header{
+.header {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 30px;
 }
+
 .header img {
   height: 150px;
 }
-.login{
+
+.login {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -36,17 +38,17 @@ body{
   border-radius: 5px;
 }
 
-.loginheader{
+.loginheader {
   display: block;
   margin: 40px;
 }
 
-.loginmain{
+.loginmain {
   display: block;
   width: 80%;
 }
 
-.loginmain > input{
+.loginmain>input {
   height: 70px;
   width: 100%;
   border-radius: 30px;
@@ -57,7 +59,7 @@ body{
   border: 0;
 }
 
-.button{
+.button {
   margin-top: 30px;
   margin-bottom: 30px;
   width: 500px;
@@ -66,24 +68,24 @@ body{
   justify-content: center;
 }
 
-.button button{
+.button button {
   margin: 0 20px;
   width: 200px;
   height: 60px;
   font-size: x-large;
   border-radius: 10px;
-  background: rgb(234,148,251);
-  background: linear-gradient(135deg, rgba(234,148,251,0.8) 0%, rgba(0,212,255,0.8) 73%, rgba(0,107,255,0.8) 100%);
+  background: rgb(234, 148, 251);
+  background: linear-gradient(135deg, rgba(234, 148, 251, 0.8) 0%, rgba(0, 212, 255, 0.8) 73%, rgba(0, 107, 255, 0.8) 100%);
   border: 0;
 }
 
-.button button :hover{
-  background: rgba(0,0,0,0);
+.button button :hover {
+  background: rgba(0, 0, 0, 0);
   border-radius: 10px;
 }
 
-.button :hover{
-  background: rgb(234,148,251);
-  background: linear-gradient(135deg, rgba(234,148,251,1) 0%, rgba(0,212,255,1) 73%, rgba(0,107,255,1) 100%);
+.button :hover {
+  background: rgb(234, 148, 251);
+  background: linear-gradient(135deg, rgba(234, 148, 251, 1) 0%, rgba(0, 212, 255, 1) 73%, rgba(0, 107, 255, 1) 100%);
   transition: 0.7s;
 }
