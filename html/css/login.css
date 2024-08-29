@@ -9,11 +9,18 @@ a{
   color: black;
 }
 
-body{
-  background-image: url("../images/wallpaperflare.com_wallpaper\ \(5\).jpg");
+body:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-filter: brightness(80%) blur(5px);
+  background-image: url("../images/wallpaer\ \(5\).jpg");
   background-size: cover;
 }
-
 
 .header{
   width: 100%;
@@ -22,6 +29,7 @@ body{
   margin-top: 50px;
   margin-bottom: 30px;
 }
+
 .header img {
   height: 150px;
 }
@@ -40,7 +48,9 @@ body{
   display: block;
   margin: 40px;
 }
-
+.loginheader h1 {
+  font-size: xx-large;
+}
 .loginmain{
   display: block;
   width: 80%;
@@ -51,7 +61,7 @@ body{
   width: 100%;
   border-radius: 30px;
   margin-bottom: 30px;
-  font-size: x-large;
+  font-size: larger;
   padding: 20px;
   background-color: rgba(182, 248, 248, 0.7);
   border: 0;
@@ -72,18 +82,7 @@ body{
   height: 60px;
   font-size: x-large;
   border-radius: 10px;
-  background: rgb(234,148,251);
-  background: linear-gradient(135deg, rgba(234,148,251,0.8) 0%, rgba(0,212,255,0.8) 73%, rgba(0,107,255,0.8) 100%);
+  background: rgb(251,216,224);
+  background: linear-gradient(127deg, rgba(251,216,224,1) 0%, rgba(207,144,193,1) 62%, rgba(170,203,224,1) 100%);
   border: 0;
-}
-
-.button button :hover{
-  background: rgba(0,0,0,0);
-  border-radius: 10px;
-}
-
-.button :hover{
-  background: rgb(234,148,251);
-  background: linear-gradient(135deg, rgba(234,148,251,1) 0%, rgba(0,212,255,1) 73%, rgba(0,107,255,1) 100%);
-  transition: 0.7s;
 }

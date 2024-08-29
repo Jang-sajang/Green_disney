@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/register2.css" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <script src="js/mouse.js"></script>
+
+</head>
+
+<body>
+  <div class="header">
+    <a href="index.html"><img src="images/logo3.png" alt="logo" /></a>
+  </div>
+  <div class="register">
+    <div class="registermain">
+      <h1>회원정보입력</h1>
+      <table>
+        <tr>
+          <th>이름</th>
+          <td id="name"><input type="text"></td>
+        </tr>
+        <tr>
+          <th>아이디</th>
+          <td id="id">
+            <input type="text"><button>아이디중복확인</button>
+            <p>6~16문자까지 영문자(소문자), 숫자 사용 가능합니다.</p>
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td id="password">
+            <input type="text">
+            <p>6~16자리까지 영문자(대소문자), 숫자 및 특수문자 사용 가능합니다.<br>
+              3자리 연속 또는 같은 문자, 아이디는 사용하실 수 없습니다.</p>
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호 확인</th>
+          <td id="password"><input type="text"></td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td id="email"><input type="text">@<input type="text"></td>
+        </tr>
+        <tr>
+          <th>연락처</th>
+          <td id="phone"><input type="text"> - <input type="text"> - <input type="text"></td>
+        </tr>
+        <tr>
+          <th>정보수신 여부</th>
+          <td>서비스 및 이벤트 소식을 <input type="checkbox">이메일로 수신하겠습니다. <input type="checkbox">SMS로 수신하겠습니다.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

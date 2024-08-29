@@ -1,0 +1,315 @@
+@charset "utf-8";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sofia", sans-serif;
+}
+a {text-decoration: none;}
+.inner_container {width: 100%; }
+
+
+
+
+/* 헤더 */
+body {
+
+  height:1000px;
+  margin: 0px;
+  padding: 0;
+
+  background-repeat: no-repeat;
+}
+#wrap{
+  height: 100px;
+  background-color: rgba(15, 56, 123);
+}
+#nav {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+}
+
+#nav.hidden {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+#nav.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#nav.fixed {
+  background-color: rgba(15, 56, 123,0.9);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#nav .logo {
+  position: absolute;
+  left: 40px;
+  top: 15px;
+}
+
+#nav .login {
+  position: absolute;
+  right: 50px;
+  top: 29px;
+}
+
+#nav .nav1 {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(58%); /* Center nav1 horizontally */
+  width: auto; /* Allow width to adjust based on content */
+}
+
+#nav .nav1 ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+#nav .nav1 li {
+  list-style: none;
+  position: relative;
+  padding: 0 15px; /* Space between menu items */
+}
+
+#nav .nav1 li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px; /* Add padding for better spacing */
+}
+
+#nav .nav1 li ul.lnb {
+  position: absolute;
+  top: 100%; /* Position it below the parent menu item */
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 5px 0; /* Reduced padding for narrower menu */
+  list-style: none;
+  border-radius: 5px;
+  min-width: 150px; /* Reduced width for the sub-menu */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
+  display: none; /* Hide sub-menu by default */
+}
+
+#nav .nav1 li:hover ul.lnb {
+  display: block; /* Show sub-menu on hover */
+
+}
+#nav .nav1 li:hover ul#lnb1  {
+  margin-left: -18px;
+}
+#nav .nav1 li:hover ul#lnb2  {
+  margin-left: 0px;
+}
+#nav .nav1 li:hover ul#lnb3  {
+  margin-left: -10px;
+}
+
+#nav .nav1 li ul.lnb li {
+  padding: 5px 10px;
+}
+
+#nav .nav1 li ul.lnb li a {
+  color: #fff;
+  text-align: center; /* Align text to the left */
+}
+
+/* 디즈니파크 티켓 선택 */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 0;
+}
+.control-group {
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 200px;
+  height: 210px;
+  margin: 10px;
+}
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+}
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+.control input:checked ~ .control__indicator {
+  background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #0e647d;
+}
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--checkbox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+  background: #7b7b7b;
+}
+
+/* Footer Styles */
+.footer_area {
+  background-color: #afafaf80;
+  padding: 63px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.1), 0 6px 20px rgba(0, 0, 255, 0.1);
+  position: relative;
+  top: 50px;
+}
+
+.f_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer_widgets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.social_media {
+  margin-bottom: 20px;
+}
+
+.social_icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #007bff;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.social_icon:hover {
+  background-color: #a1b4ff93;
+  color: #ffffff;
+}
+
+.footer_sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer_section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.section_title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer_section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer_section ul li a {
+  color: #41464ddb;
+  text-decoration: none;
+}
+
+.footer_section ul li a:hover {
+  text-decoration: underline;
+}
+.mickey_icon{
+  position: absolute;
+  right: 1rem;
+  top: 40%;
+  width: 100px;
+  height: auto;
+}
+.Dcastle{
+  position: absolute;
+  left: 22rem;
+  width: 200px;
+  top: 45%;
+}

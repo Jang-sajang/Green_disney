@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -9,172 +11,168 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="js/bxslider.js"></script>
+    <!-- <script src="js/bxslider.js"></script> -->
+    <script src="js/mouse.js"></script>
     <title>디즈니랜드kr</title>
+    
 </head>
 <body>
-    <header>
-        <div class="inner_container">
-            <div class="logo">
-                <a href="index.html"><img src="images/logo3.png" alt="디즈니 로고" width="200" height="66"></a>
-            </div>
-            <div class="header_menu">
-                <ul class="bottom_menu">
-                    <li><a href="#">즐길거리</a>
-                      <ul class="lnb">
-                        <li><a href="#">놀이기구</a></li>
-                        <li><a href="#">페스티벌</a></li>
-                        <li><a href="#">식당/쇼핑</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">요금/우대혜택</a>
-                      <ul class="lnb">
-                        <li><a href="#">이용요금</a></li>
-                        <li><a href="#">숙소요금</a></li>
-                        <li><a href="#">할인&혜택</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">이용가이드</a>
-                      <ul class="lnb">
-                        <li><a href="#">운영/운휴</a></li>
-                        <li><a href="#">이용안내</a></li>
-                        <li><a href="#">오시는길</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">소통서비스</a>
-                      <ul class="lnb">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">고객의소리</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#"><img src="images/login.png" alt="로그인 아이콘" width="60"></a></li>
-                </ul>
-            </div>
-             <div class="bg-video">
-                <video class="bg-video__content" autoplay muted loop>
-                  <source src="images/intro_video.mp4" type="video/mp4" />
-                  <source src="images/intro_video.mp4" type="video/webm" />
-                </video>
-              </div>
-        </div>
-    </header>
+  <div id="toTop" ><a href="booking.html"><img src="images/지니.png" width="200"></a></div>
+  <div id="wrap">
+    <div id="nav">
+      <div class="inner">
+        <h1 class="logo">
+          <a href="#">
+            <img src="images/logo3.png" alt="disney" width="200" height="66">
+          </a>
+        </h1>
+        <nav class="nav1">
+          <ul class="gnb clear">
+            <li><a href="#">즐길거리</a>
+              <ul class="lnb" id="lnb1">
+                <li><a href="sub_att.html">놀이기구</a></li>
+                <li><a href="#">페스티벌</a></li>
+                <li><a href="#">식당/쇼핑</a></li>
+              </ul>
+            </li>
+            <li><a href="#">요금/우대혜택</a>
+              <ul class="lnb" id="lnb2">
+                <li><a href="#">이용요금</a></li>
+                <li><a href="#">숙소요금</a></li>
+                <li><a href="#">할인&혜택</a></li>
+              </ul>
+            </li>
+            <li><a href="#">이용가이드</a>
+              <ul class="lnb" id="lnb3">
+                <li><a href="#">운영/운휴</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">오시는길</a></li>
+              </ul>
+            </li>
+            <li><a href="#">소통서비스</a>
+              <ul class="lnb" id="lnb3">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">고객의소리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="login"><a href="login.html"><img src="images/login.png" alt="로그인 아이콘" width="60"></a></div>
+      </div>
+    </div><!--header end-->
+
+    <header class="bg-video">
+      <video class="bg-video__content" autoplay muted loop>
+        <source src="images/intro_video.mp4" type="video/mp4" />
+        <source src="images/intro_video.mp4" type="video/webm" />
+      </video>
+    </header><!--visual-slider end-->
+  </div>
     <div id="main">
-        <div class="inner_container">
-            <div class="container1">
-                <div class="title">다양한 할인 혜택</div>
-                <div class="divide_line">———————</div>
-                <div class="subtitle_container">
-                  <div class="subtitle"><a href="#">많은 혜택 더보기</a></div>
-                  </div>
-                <div class="row">
-                  <div class="card">
-                    <img src="images/card.webp"width="300px" height="200px"/>
-                    <div class="inner-card">
-                      <h2>디즈니랜드</h2>
-                      <p>
-                        놀이공원 가고싶다 격렬하게 놀러가고싶다
-                      </p>
-                      <div class="bottom_part">
-                        <div class="left_part">
-                          <div class="text_tag">신한카드 <span class="divide">|</span> 동부</div>
-                          <div class="text_ago">2024년 10월 12일까지</div>
-                        </div>
-                        <div class="right_bubble">
-                          <div class="bubble_text">1</div>
-                        </div>
+      <div class="inner_container">
+          <div class="container1">
+              <div class="title">다양한 할인 혜택</div>
+              <div class="divide_line">———————</div>
+              <div class="subtitle_container">
+                <div class="subtitle"><a href="#">많은 혜택 더보기</a></div>
+                </div>
+              <div class="row">
+                <div class="card">
+                  <img src="images/wallpaer (1).jpg"width="300px" height="200px"/>
+                  <div class="inner-card">
+                    <h2>디즈니랜드</h2>
+                    <p>
+                      주간 종합이용권 할인 혜택
+                    </p>
+                    <div class="bottom_part">
+                      <div class="left_part">
+                        <div class="text_tag">신한카드 <span class="divide">|</span> 동부</div>
+                        <div class="text_ago">2024년 10월 12일까지</div>
                       </div>
+                     
                     </div>
                   </div>
+                </div>
                   <div class="card">
-                    <img src="images/card.webp"width="300px" height="200px"/>
+                    <img src="images/wallpaer (2).jpg"width="300px" height="200px"/>
                     <div class="inner-card">
                       <h2>디즈니랜드</h2>
                       <p>
-                        놀이공원 가고싶다 격렬하게 놀러가고싶다
+                        주간 자유입장권 할인 혜택
                       </p>
                       <div class="bottom_part">
                         <div class="left_part">
                           <div class="text_tag">삼성카드 <span class="divide">|</span> 뉴욕</div>
                           <div class="text_ago">2024년 10월 12일까지</div>
                         </div>
-                        <div class="right_bubble">
-                          <div class="bubble_text">2</div>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <img src="images/card.webp"width="300px" height="200px"/>
+                    <img src="images/wallpaer (3).jpg"width="300px" height="200px"/>
                     <div class="inner-card">
                       <h2>디즈니랜드</h2>
                       <p>
-                        놀이공원 가고싶다 격렬하게 놀러가고싶다
+                        야간 자유입장권 할인 혜택
                       </p>
                       <div class="bottom_part">
                         <div class="left_part">
                           <div class="text_tag">체크카드 <span class="divide">|</span> 미국</div>
                           <div class="text_ago">2024년 10월 12일까지</div>
                         </div>
-                        <div class="right_bubble">
-                          <div class="bubble_text">3</div>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="card">
-                    <img src="images/card.webp"width="300px" height="200px"/>
+                    <img src="images/wallpaer (4).jpg"width="300px" height="200px"/>
                     <div class="inner-card">
                       <h2>디즈니랜드</h2>
                       <p>
-                        놀이공원 가고싶다 격렬하게 놀러가고싶다
+                        주간 종합이용권 할인 혜택
                       </p>
                       <div class="bottom_part">
                         <div class="left_part">
                           <div class="text_tag">비자카드 <span class="divide">|</span> 부산</div>
                           <div class="text_ago">2024년 10월 12일까지</div>
                         </div>
-                        <div class="right_bubble">
-                          <div class="bubble_text">4</div>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <img src="images/card.webp"width="300px" height="200px"/>
+                    <img src="images/wallpaer (5).jpg"width="300px" height="200px"/>
                     <div class="inner-card">
                       <h2>디즈니랜드</h2>
                       <p>
-                        놀이공원 가고싶다 격렬하게 놀러가고싶다
+                        주간 자유이용권 할인 혜택
                       </p>
                       <div class="bottom_part">
                         <div class="left_part">
                           <div class="text_tag">마스터카드 <span class="divide">|</span> 서울</div>
                           <div class="text_ago">2024년 10월 12일까지</div>
                         </div>
-                        <div class="right_bubble">
-                          <div class="bubble_text">5</div>
-                        </div>
+                       
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <img src="images/card.webp"width="300px" height="200px"/>
+                    <img src="images/wallpaer (6).jpg"width="300px" height="200px"/>
                     <div class="inner-card">
                       <h2>디즈니랜드</h2>
                       <p>
-                        놀이공원 가고싶다 격렬하게 놀러가고싶다
+                        야간 자유입장권 할인 혜택
                       </p>
                       <div class="bottom_part">
                         <div class="left_part">
                           <div class="text_tag">다람카드 <span class="divide">|</span> 대구</div>
                           <div class="text_ago">2024년 10월 12일까지</div>
                         </div>
-                        <div class="right_bubble">
-                          <div class="bubble_text">6</div>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -214,56 +212,64 @@
 <section id="festival">
   <div id="container3">
     <div class="title3">
-      <b>디즈니 페스티벌 & 이벤트</b><br>
-      다양하고 풍성한 공연과 행사를 즐기세요!</div>
+      <div class="title">Festival & Event</div>
+      <div class="divide_line">———————</div>
+      <div class="subtitle_container">
+        <div class="subtitle3"><a href="#">다양하고 풍성한 공연과 행사를 즐기세요!</a></div><br>
+        </div>
+      </div>
     <div class="title3slide">
         <div class='slide-track'>
           <div class='slide'>
             <div class="train-card">
-              <img src="../html/images/moanafes.jpg" alt="모아나">
-              <div class="card-text"><h1>모아나 공연 관람</h1>오후 1시~2시 사이<br>2시간 공연</div>
+              <img src="images/moanafes.jpg" alt="모아나">
+              <div class="card-text"><h1>모아나 공연 관람</h1>
+                <p>오후 1시~2시 사이<br>2시간 공연</p>
+              </div>
             </div>
           </div>
           <div class='slide'>
             <div class="train-card">
-              <img src="../html/images/dining.jpg" alt="식당">
-              <div class="card-text"><h1>1인 식사권 무료 Event</h1>디즈니 월드 공식 SNS계정에서 진행하는 이벤트 참여 후 1인 식사권 제공!</div>
+              <img src="images/dining.jpg" alt="식당">
+              <div class="card-text"><h1>1인 식사권 무료 Event</h1><p>디즈니 월드 공식 SNS계정에서 진행하는 이벤트 참여 후 1인 식사권 제공!</p></div>
             </div>
           </div>
           <div class='slide'>
             <div class="train-card">
-              <img src="../html/images/junglebus.jpg" alt="정글버스">
-              <div class="card-text"><h1>정글 탐험 BUS</h1>숙소 밖은 위험해~<br>셔틀버스 신청하러 가기</div>
+              <img src="images/junglebus.jpg" alt="정글버스">
+              <div class="card-text"><h1>정글 탐험 BUS</h1>
+                <p>숙소 밖은 위험해~<br>셔틀버스 신청하러 가기</p>
+              </div>
             </div>
           </div>
           <div class='slide'>
             <div class="train-card">
-              <img src="../html/images/toystorystore.jpg" alt="토이스토리팝업">
-              <div class="card-text"><h1>토이스토리 팝업</h1>외계인을 잡아라! 다양한 오락거리와 토이스토리 친구들을 만날 수 있는 특별한 장소!</div>
+              <img src="images/toystorystore.jpg" alt="토이스토리팝업">
+              <div class="card-text"><h1>토이스토리 팝업</h1><p>외계인을 잡아라! 다양한 오락거리와 토이스토리 친구들을 만날 수 있는 특별한 장소!</p></div>
             </div>
           </div>
           <div class='slide'>
             <div class="train-card">
-              <img src="../html/images/moanafes.jpg" alt="모아나">
-              <div class="card-text"><h1>모아나 공연 관람</h1>오후 1시~2시 사이<br>2시간 공연</div>
+              <img src="images/moanafes.jpg" alt="모아나">
+              <div class="card-text"><h1>모아나 공연 관람</h1><p>오후 1시~2시 사이<br>2시간 공연</p></div>
             </div>
           </div>
           <div class='slide'>
             <div class="train-card">
-              <img src="../html/images/dining.jpg" alt="식당">
-              <div class="card-text"><h1>1인 식사권 무료 Event</h1>디즈니 월드 공식 SNS계정에서 진행하는 이벤트 참여 후 1인 식사권 제공!</div>
+              <img src="images/dining.jpg" alt="식당">
+              <div class="card-text"><h1>1인 식사권 무료 Event</h1><p>디즈니 월드 공식 SNS계정에서 진행하는 이벤트 참여 후 1인 식사권 제공!</p></div>
             </div>
           </div>
           <div class='slide'>
             <div class="train-card">
-              <img src="../html/images/junglebus.jpg" alt="정글버스">
-              <div class="card-text"><h1>정글 탐험 BUS</h1>숙소 밖은 위험해~<br>셔틀버스 신청하러 가기</div>
+              <img src="images/junglebus.jpg" alt="정글버스">
+              <div class="card-text"><h1>정글 탐험 BUS</h1><p>숙소 밖은 위험해~<br>셔틀버스 신청하러 가기</p></div>
             </div>
           </div>
           <div class='slide'>
             <div class="train-card">
-              <img src="../html/images/toystorystore.jpg" alt="토이스토리팝업">
-              <div class="card-text"><h1>토이스토리 팝업</h1>외계인을 잡아라! 다양한 오락거리와 토이스토리 친구들을 만날 수 있는 특별한 장소!</div>
+              <img src="images/toystorystore.jpg" alt="토이스토리팝업">
+              <div class="card-text"><h1>토이스토리 팝업</h1><p>외계인을 잡아라! 다양한 오락거리와 토이스토리 친구들을 만날 수 있는 특별한 장소!</p></div>
             </div>
           </div>
         </div>
@@ -273,8 +279,8 @@
 <section id="partner">
     <article class="b_green">
         <div class="partner_hover">
-            <h1><a href="#">YOUTUBE</a></h1>
-            <h2>디즈니랜드의 생생한 순간!<br>영상으로 만나볼까요?</h2>
+            <h1><a href="https://www.youtube.com/@DisneyMovieKr"  target="_blank">YOUTUBE</a></h1>
+            <h2>디즈니랜드의 생생한 순간!<br><br>영상으로 만나볼까요?</h2>
             <div class="white_back">
                 <p>"네게는 아직 꿈을 이루기위한 충분한 시간이 있어" - 피터팬 -</p>
             </div>
@@ -282,7 +288,7 @@
     </article>
     <article class="classroom">
         <div class="partner_hover">
-            <h1><a href="#">INSTAGRAM</a></h1>
+            <h1><a href="https://www.instagram.com/disneykorea" target="_blank">INSTAGRAM</a></h1>
             <h2>아직도 망설이고 계신가요?</h2>
             <div class="white_back">
                 <p>"나를 웃게하는 것이 나 자신을 사랑하는 것이다" - 미키마우스 -</p>
@@ -291,7 +297,7 @@
     </article>
     <article class="coffee">
         <div class="partner_hover">
-            <h1><a href="#">TWITER</a></h1>
+            <h1><a href="https://www.facebook.com/DisneyKorea/" target="_blank">FACEBOOK</a></h1>
             <h2>꿈과 동화의 세계로 오세요.</h2>
             <div class="white_back">
                 <p>"영원한 이별이 아니야, 다시 만날 때까지만 안녕." - 월E -</p>
@@ -354,6 +360,23 @@
   </div>
 </footer>
 <script>
+
+$(function() { // 보이기 | 숨기기 
+	$(window).scroll(function() { 
+		if ($(this).scrollTop() > 250) { //250 넘으면 버튼이 보여짐니다. 
+			$('#toTop').fadeIn(); 
+			$('#toTop').css('left', $('#sidebar').offset().left); // #sidebar left:0 죄표 
+		} else { 
+			$('#toTop').fadeOut(); 
+		} 
+	}); 
+	// 버튼 클릭시 
+	// $("#toTop").click(function() { 
+	// 	$('html, body').animate({ scrollTop : 0 // 0 까지 animation 이동합니다. 
+	// 	}, 400); // 속도 400 return false; 
+	// }); 
+});
+
     document.addEventListener('DOMContentLoaded', function() {
         const items = document.querySelectorAll('.item');
     
@@ -367,6 +390,36 @@
             });
         });
     });
+
+
+    function navigo() {
+      const nav = document.querySelector('#nav');
+      const hideStartPosition = 150; // 스크롤 위치가 이 값보다 클 때 메뉴를 숨김
+      const fixedStartPosition = 800; // 스크롤 위치가 이 값보다 클 때 메뉴를 고정
+
+      document.addEventListener('scroll', onScroll, { passive: true });
+
+      function onScroll() {
+        const scrollPosition = window.pageYOffset;
+
+        if (scrollPosition >= fixedStartPosition) {
+          nav.classList.add('fixed');
+        } else {
+          nav.classList.remove('fixed');
+        }
+
+        if (scrollPosition >= hideStartPosition) {
+          nav.classList.add('hidden');
+        } else {
+          nav.classList.remove('hidden');
+        }
+      }
+    }
+
+    navigo();
+
+    
+
 </script>
 </body>
 </html>
